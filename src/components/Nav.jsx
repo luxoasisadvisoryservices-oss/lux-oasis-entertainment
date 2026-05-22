@@ -43,19 +43,28 @@ export default function Nav() {
         transition: "border-color 0.3s",
       }}
     >
-      <div
+      {/* Logo — links to main site */}
+      
+        href="https://www.luxoasisadvisory.com"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
           fontFamily: "'Cormorant Garamond', Georgia, serif",
           fontSize: "1rem",
           fontWeight: 400,
           letterSpacing: "0.03em",
           color: "#181714",
+          textDecoration: "none",
+          transition: "opacity 0.2s",
         }}
+        onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+        onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
       >
         Lux Oasis{" "}
         <em style={{ fontStyle: "italic", color: "#9a7450" }}>Advisory</em>
-      </div>
+      </a>
 
+      {/* Nav links */}
       <ul
         style={{
           display: "flex",
@@ -65,7 +74,7 @@ export default function Nav() {
       >
         {navLinks.map((link) => (
           <li key={link.href}>
-            <a
+            
               href={link.href}
               onClick={(e) => scrollTo(e, link.href)}
               style={{
@@ -85,7 +94,8 @@ export default function Nav() {
         ))}
       </ul>
 
-      <a
+      {/* CTA */}
+      
         href="#contact"
         onClick={(e) => scrollTo(e, "#contact")}
         style={{
