@@ -43,7 +43,6 @@ export default function Nav() {
         transition: "border-color 0.3s",
       }}
     >
-      {/* Logo — links to main site */}
       
         href="https://www.luxoasisadvisory.com"
         target="_blank"
@@ -64,14 +63,7 @@ export default function Nav() {
         <em style={{ fontStyle: "italic", color: "#9a7450" }}>Advisory</em>
       </a>
 
-      {/* Nav links */}
-      <ul
-        style={{
-          display: "flex",
-          gap: "2rem",
-          listStyle: "none",
-        }}
-      >
+      <ul style={{ display: "flex", gap: "2rem", listStyle: "none" }}>
         {navLinks.map((link) => (
           <li key={link.href}>
             
@@ -94,7 +86,6 @@ export default function Nav() {
         ))}
       </ul>
 
-      {/* CTA */}
       
         href="#contact"
         onClick={(e) => scrollTo(e, "#contact")}
